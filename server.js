@@ -7,5 +7,5 @@ const PORT = 4433;
 
 // Lancement du serveur sécurisé
 https.createServer(sslOptions, app).listen(PORT, () => {
-  console.log(`✅ Serveur sécurisé démarré sur https://192.168.88.13:${PORT}`);
+  console.log(`✅ Serveur sécurisé démarré sur https://192.168.88.12:${PORT}`);
 });

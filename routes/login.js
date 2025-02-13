@@ -15,7 +15,7 @@ router.post("/login", async (req, res) => {
   try {
     const [users] = await db
       .promise()
-      .query("SELECT * FROM login WHERE username = ?", [username]);
+      .query("SELECT * FROM user WHERE username = ?", [username]);
 
     // Vérification du username
     if (users.length === 0) {
@@ -41,8 +41,8 @@ router.post("/login", async (req, res) => {
 });
 
 
-router.get("/userr", async (req, res) => {
-  const query = "SELECT * FROM login";
+router.get("/user", async (req, res) => {
+  const query = "SELECT * FROM user";
 
   try {
     const [results] = await db.promise().query(query);
