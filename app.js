@@ -45,5 +45,8 @@ app.use('/secure', loginRoutes);
 const parentsRoutes = require('./routes/parents');
 app.use('/parents', parentsRoutes);
 
+const etablissementRoutes = require('./routes/etablissement');
+app.use('/etablissement', etablissementRoutes);
+
 module.exports = app;
 
