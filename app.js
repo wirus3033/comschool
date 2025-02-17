@@ -48,5 +48,44 @@ app.use('/parents', parentsRoutes);
 const etablissementRoutes = require('./routes/etablissement');
 app.use('/etablissement', etablissementRoutes);
 
+const eleveRoutes = require('./routes/eleve');
+app.use('/eleve', eleveRoutes);
+
+const matiersRoutes =require('./routes/matier');
+app.use('/matier', matiersRoutes);
+
+const niveauRoutes =require('./routes/niveau');
+app.use('/niveau', niveauRoutes);
+
+const  devoirsRoutes =require('./routes/devoirs');
+app.use('/devoirs', devoirsRoutes);
+
+const emploidutempsRoutes =require('./routes/emploi');
+app.use('/emploi', emploidutempsRoutes);
+
+const ouvrageRoutes =require('./routes/ouvrage');
+app.use('/ouvrage', ouvrageRoutes);
+
+const bulletinRoutes =require('./routes/bulletin');
+app.use('/bulletin', bulletinRoutes);
+
+const classeRoutes =require('./routes/classeecole');
+app.use('/classe', classeRoutes);
+
+const conseilRoutes =require('./routes/conseil');
+app.use('/conseil', conseilRoutes);
+
+const activiteRoutes =require('./routes/activite');
+app.use('/activite', activiteRoutes);
+
+const noteseleveRoutes =require('./routes/noteseleve');
+app.use('/noteseleve', noteseleveRoutes);
+
+const mesuredisciplinaireRoutes =require('./routes/mesuredisciplinaire');
+app.use('/mesuredisciplinaire', mesuredisciplinaireRoutes);
+
+const categorieetsRoutes =require('./routes/categorieets');
+app.use('/categorieets', categorieetsRoutes);
+
 module.exports = app;
 
