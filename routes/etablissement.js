@@ -13,17 +13,19 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/etablissement/:id", async (req, res) => {
-  const etablissementId = req.params.id;
-  const query = "SELECT * FROM etablissement WHERE id = ?";
+router.get("/:IDEtablissement", async (req, res) => {
+  const { IDEtablissement } = req.params;
+  
+  const query = "SELECT * FROM etablissement WHERE IDEtablissement = ?";
 
   try {
-    const [results] = await db.promise().query(query, [etablissementId]);
+    const [results] = await db.promise().query(query, [IDEtablissement]);
+    
     if (results.length === 0) {
-      res.status(404).json({ error: "Etablissement non trouvé" });
-    } else {
-      res.json(results[0]);
+      return res.status(404).json({ message: "Aucun etablissement trouvé pour ce IDEtablissement." });
     }
+    
+    res.json(results);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
