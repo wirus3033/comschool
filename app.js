@@ -51,8 +51,8 @@ app.use('/etablissement', etablissementRoutes);
 const eleveRoutes = require('./routes/eleve');
 app.use('/eleve', eleveRoutes);
 
-const matiersRoutes =require('./routes/matier');
-app.use('/matier', matiersRoutes);
+const matiersRoutes =require('./routes/matiere');
+app.use('/matiere', matiersRoutes);
 
 const niveauRoutes =require('./routes/niveau');
 app.use('/niveau', niveauRoutes);
