@@ -52,6 +52,12 @@ router.post("/auth", async (req, res) => {
 
   const parentId = idParent[0]?.IDPARENTS || null;
 
+  // requette pour recuperer etablissement dans eleve avec l'idetablissement
+  const [etablissement] = await db
+  .promise()
+  .query("SELECT * FROM eleve WHERE IDEtablissement = ?", [users[0].IDEtablissement]);
+
+
     console.log("Connexion réussie, token généré");
     return res.status(200).json({
       status: "success",
@@ -59,7 +65,9 @@ router.post("/auth", async (req, res) => {
       token: token, 
       user: users[0],
       userInfo: userInfo[0],
-      idParent: parentId
+      idParent: parentId,
+      etablissement: etablissement[0],
+
     });
 
   } catch (error) {
