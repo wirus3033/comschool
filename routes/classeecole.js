@@ -13,16 +13,16 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:IDEtablissement", async (req, res) => {
-  const { IDEtablissement } = req.params;
+router.get("/:IDEtablissement/:IDClasseEcole", async (req, res) => {
+  const { IDEtablissement, IDClasseEcole } = req.params;
   
-  const query = "SELECT * FROM classeecole WHERE IDEtablissement = ?";
+  const query = "SELECT * FROM classeecole WHERE IDEtablissement = ? AND IDClasseEcole = ?";
 
   try {
-    const [results] = await db.promise().query(query, [IDEtablissement]);
+    const [results] = await db.promise().query(query, [IDEtablissement, IDClasseEcole]);
     
     if (results.length === 0) {
-      return res.status(404).json({ message: "Aucun classeecole trouvé pour ce IDEtablissement." });
+      return res.status(404).json({ message: "Aucune classeecole trouvée pour cet IDEtablissement et IDClasseEcole." });
     }
     
     res.json(results);
@@ -30,5 +30,6 @@ router.get("/:IDEtablissement", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 module.exports = router;
