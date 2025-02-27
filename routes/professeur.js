@@ -1,9 +1,9 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const { db } = require("../config/serverConfig");
+const { db } = require('../config/serverConfig');
 
-router.get("/", async (req, res) => {
-  const query = "SELECT * FROM conseil";
+router.get('/', async (req, res) => {
+  const query = 'SELECT * FROM professeur';
 
   try {
     const [results] = await db.promise().query(query);

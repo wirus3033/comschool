@@ -87,5 +87,8 @@ app.use('/mesuredisciplinaire', mesuredisciplinaireRoutes);
 const categorieetsRoutes =require('./routes/categorieets');
 app.use('/categorieets', categorieetsRoutes);
 
+const professeurRoutes =require('./routes/professeur');
+app.use('/professeur', professeurRoutes);
+
 module.exports = app;
 
