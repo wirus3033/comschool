@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 router.get("/:idParent", async (req, res) => {
     const { idParent } = req.params;
     
-    const query = "SELECT * FROM Eleve WHERE IDPARENTS = ?";
+    const query = "SELECT * FROM eleve WHERE IDPARENTS = ?";
   
     try {
       const [results] = await db.promise().query(query, [idParent]);
