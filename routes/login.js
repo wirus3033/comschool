@@ -89,7 +89,7 @@ router.post("/auth", async (req, res) => {
         // Requête pour récupérer les informations du type d'utilisateur
         const [userInfo] = await db
           .promise()
-          .query("SELECT * FROM TypeUser WHERE IDTypeUser = ?", [users[0].IDTypeUser]);
+          .query("SELECT * FROM typeuser WHERE IDTypeUser = ?", [users[0].IDTypeUser]);
     
         // Requête pour récupérer l'ID du parent associé à l'utilisateur
         const [idParent] = await db
