@@ -116,7 +116,7 @@ router.post("/auth", async (req, res) => {
     
       } catch (error) {
         console.error("Erreur lors de la connexion :", error);
-        res.status(500).json({ status: "error", message: "Erreur serveur." });
+        res.status(500).json({ status: "error1111", message: "etoooo", error});
       }
     });
     
@@ -132,7 +132,7 @@ router.post("/auth", async (req, res) => {
     });
 
   } catch (error) {
-    res.status(500).json({ status: "error", message: "Erreur serveur." });
+    res.status(500).json({ status: "error222222", message: "ambanyyy.",error });
   }
 });
 

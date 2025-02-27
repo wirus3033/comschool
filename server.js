@@ -10,11 +10,11 @@ const https = require('https');
 //   console.log(`✅ Serveur sécurisé démarré sur https://192.168.88.12:${PORT}`);
 // });
 
-// const http = require('http');
+const http = require('http');
 const app = require('./app');
 
-const PORT = 3306; // Utilise le port 3000 ou un autre port que tu souhaites
-
+// const PORT = 4433; // Utilise le port 3000 ou un autre port que tu souhaites
+const PORT = 3306; 
 // Lancement du serveur HTTP
 http.createServer(app).listen(PORT, () => {
   console.log(`✅ Serveur démarré sur http://192.168.1.61:${PORT}`);
