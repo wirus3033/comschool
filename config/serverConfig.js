@@ -1,5 +1,5 @@
-// const fs = require('fs');
-// const path = require('path');
+const fs = require('fs');
+const path = require('path');
 // const mysql = require('mysql2');
 // const dotenv = require('dotenv');
 
@@ -53,4 +53,12 @@ db.getConnection((err, connection) => {
   connection.release();
 });
 
-module.exports = { db };
+module.exports = { db,
+    sslOptions: {
+    key: fs.readFileSync(path.join(__dirname, '../ssl/local_server.key')),
+    cert: fs.readFileSync(path.join(__dirname, '../ssl/local_server.crt')),
+    ca: fs.readFileSync(path.join(__dirname, '../ssl/local_server.crt')),
+    requestCert: true,
+    rejectUnauthorized: true,
+  },
+ };
