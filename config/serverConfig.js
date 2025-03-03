@@ -54,11 +54,11 @@ db.getConnection((err, connection) => {
 });
 
 module.exports = { db,
-    sslOptions: {
-    key: fs.readFileSync(path.join(__dirname, '../ssl/local_server.key')),
-    cert: fs.readFileSync(path.join(__dirname, '../ssl/local_server.crt')),
-    ca: fs.readFileSync(path.join(__dirname, '../ssl/local_server.crt')),
-    requestCert: true,
-    rejectUnauthorized: true,
-  },
+  //   sslOptions: {
+  //   key: fs.readFileSync(path.join(__dirname, '../ssl/local_server.key')),
+  //   cert: fs.readFileSync(path.join(__dirname, '../ssl/local_server.crt')),
+  //   ca: fs.readFileSync(path.join(__dirname, '../ssl/local_server.crt')),
+  //   requestCert: true,
+  //   rejectUnauthorized: true,
+  // },
  };
