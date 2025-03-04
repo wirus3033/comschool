@@ -3,7 +3,7 @@ const router = express.Router();
 const { db } = require("../config/serverConfig");
 
 router.get("/", async (req, res) => {
-  const query = "SELECT * FROM ARCHAtivite";
+  const query = "SELECT * FROM ARCHActivite";
 
   try {
     const [results] = await db.promise().query(query);
