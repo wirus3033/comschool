@@ -35,7 +35,7 @@ const app = express();
 app.use(cors());
 
 // Appliquer le middleware d'authentification
-// app.use(authMiddleware);
+app.use(authMiddleware);
 
 // Ajouter ces deux lignes
 app.use(express.json());
