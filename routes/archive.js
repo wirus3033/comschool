@@ -3,7 +3,7 @@ const router = express.Router();
 const { db } = require("../config/serverConfig");
 
 router.get("/", async (req, res) => {
-  const query = "SELECT * FROM archive";
+  const query = "SELECT * FROM archivage";
 
   try {
     const [results] = await db.promise().query(query);
