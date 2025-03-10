@@ -93,8 +93,8 @@ app.use('/categorieets', categorieetsRoutes);
 const professeurRoutes =require('./routes/professeur');
 app.use('/professeur', professeurRoutes);
 
-const archactiviteRoutes =require('./routes/archactivite');
-app.use('/archactivite', archactiviteRoutes);
+const archactiviteRoutes =require('./routes/archive');
+app.use('/archive', archactiviteRoutes);
 
 module.exports = app;
 
