@@ -96,5 +96,8 @@ app.use('/professeur', professeurRoutes);
 const archactiviteRoutes =require('./routes/archive');
 app.use('/archive', archactiviteRoutes);
 
+const resultat =require('./routes/resultat');
+app.use('/resultat', resultat);
+
 module.exports = app;
 
