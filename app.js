@@ -99,5 +99,8 @@ app.use('/archive', archactiviteRoutes);
 const resultat =require('./routes/resultat');
 app.use('/resultat', resultat);
 
+const presenceRoutes =require('./routes/presence');
+app.use('/presence', presenceRoutes);
+
 module.exports = app;
 
